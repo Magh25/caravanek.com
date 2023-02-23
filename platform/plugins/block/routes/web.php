@@ -1,0 +1,19 @@
+<?php
+
+Route::group(['namespace' => 'Botble\Block\Http\Controllers', 'middleware' => ['web', 'core']], function () {
+    Route::group(['prefix' => BaseHelper::getAdminPrefix(), 'middleware' => 'auth'], function () {
+
+        Route::group(['prefix' => 'blocks', 'as' => 'block.'], function () {
+
+            Route::resource('', 'BlockController')->parameters(['' => 'block']);
+            Route::get('page2', function(){
+                dd("sss");
+            });
+            Route::delete('items/destroy', [
+                'as'         => 'deletes',
+                'uses'       => 'BlockController@deletes',
+                'permission' => 'block.destroy',
+            ]);
+        });
+    });
+});

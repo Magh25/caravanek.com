@@ -1,0 +1,30 @@
+<?php
+
+return [
+    'create' => 'حساب جديد',
+    'edit' => 'تحرير الحساب ": الاسم"',
+    'name' => 'حسابات',
+    'form' => [
+        'email' => 'بريد الالكتروني',
+        'password' => 'كلمة المرور',
+        'password_confirmation' => 'تأكيد كلمة المرور',
+        'change_password' => 'تغيير كلمة المرور؟',
+    ],
+    'forgot_password' => 'هل نسيت كلمة السر؟',
+    'login' => 'تسجيل الدخول',
+    'buy_credits' => 'شراء إئتمانات',
+    'credits' => 'الاعتمادات',
+    'account_settings' => 'إعدادت الحساب',
+    'update_profile_success' => 'تحديث الملف الشخصي بنجاح!',
+    'security' => 'حماية',
+    'packages' => 'الحزم',
+    'transactions' => 'المعاملات',
+    'subscribe_package' => 'حزمة الاشتراك ": الاسم"',
+    'first_name' => 'الاسم الاول',
+    'last_name' => 'اسم العائلة',
+    'username' => 'اسم المستخدم',
+    'username_placeholder' => 'مثال: john_smith',
+    'phone' => 'هاتف',
+    'phone_placeholder' => 'هاتف',
+    'email_placeholder' => 'مثال: example@gmail.com',
+];

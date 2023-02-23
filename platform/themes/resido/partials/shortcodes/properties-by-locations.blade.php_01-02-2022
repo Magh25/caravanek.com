@@ -1,0 +1,133 @@
+<div class="travel_sec">
+			<div class="container">
+                <h2>{{ __('caravan for All Your Travel Needs') }}</h2>
+				<div class="row">					
+					<div class="travel_colum">
+						<img src="themes/resido/img/parking-spot.jpg" class="img-fluid">
+						<div class="travel_content">
+							
+								<h4>Book a Parking Spot</h4>
+								<p>Lorem ipsum dolor sit amet, consectetur adipiscing magna aliqua.</p>
+							
+						</div>
+					</div>
+					<div class="travel_colum">
+						<img src="themes/resido/img/caravan-listing.jpg" class="img-fluid">
+						<div class="travel_content">
+							<h4>Manage Caravan Listings</h4>
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing magna aliqua.</p>
+						</div>
+					</div>
+					<div class="travel_colum">
+						<img src="themes/resido/img/caravan-delivered.jpg" class="img-fluid">
+						<div class="travel_content">
+							<h4>Deliverable Caravan</h4>
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing magna aliqua.</p>
+						</div>
+					</div>					
+				</div>
+			</div>
+		</div>
+		
+		<div class="categ_sec">
+            <div class="container">
+                <div class="row">
+                    <div class="cat_colum">
+                        <div class="icon_box">
+                            <img src="themes/resido/img/wild-raning.png" alt="wild-raning">
+                        </div>
+                        <div class="content_cat">
+                            <h5>{{ __('WIDE-RANGING INVENTORY') }}</h5>
+                            <p>{{ __('From affordable pop-ups to luxury') }} </br>{{ __('motorhomes') }}</p>
+                        </div>
+                    </div>
+                    <div class="cat_colum">
+                        <div class="icon_box">
+                            <img src="themes/resido/img/marketplace.png" alt="marketplace">
+                        </div>
+                        <div class="content_cat">
+                            <h5>{{ __('LARGEST caravan RENTAL MARKETPLACE') }}</h5>
+<<<<<<< HEAD
+                            <p>{{ __('Thousands of 5 star reviews from') }} </br>{{ __('happy customers') }}</p>
+=======
+                            <!-- <p>{{ __('Thousands of 5 star reviews from') }} </br>{{ __('happy customers') }}</p> -->
+                            <p>{{ __('Our goal is to provide high quality') }} </br>{{ __('services') }}</p>
+>>>>>>> 5520a8d39d501dc26d3c21029fd8d263ec692cf7
+                        </div>
+                    </div>
+                    <div class="cat_colum">
+                        <div class="icon_box">
+                            <img src="themes/resido/img/trusted.png" alt="trusted">
+                        </div>
+                        <div class="content_cat">
+                            <h5>{{ __('SAFEST AND MOST TRUSTED') }}</h5>
+                            <p>{{ __('24/7 Emergency roadside assistance') }} </br>{{ __('on every booking') }}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+		
+		<div class="destinations_sec">
+			<div class="container">
+				<div class="row">
+					<div class="heading">
+                    <h2>{{ __('our top  caravan picks') }}</h2>
+					</div>
+					<div class="view_right">
+						<a href="#">View all National Parks <i class="fa fa-angle-double-right" aria-hidden="true"></i></a>
+					</div>
+				</div>
+				<div class="row destinations_wrap">
+					<div class="col-md-8 destinations_left">
+						<div class="item-wrap">
+							<div class="img_item">
+								<img src="themes/resido/img/grand-canyon-park.jpg" class="img-fluid">
+							</div>
+							<div class="content_box">
+								<h4>Grand Canyon National Park</h4>
+								<p>For an average of SAR 130 per night</p>
+							</div>
+						</div>
+						<div class="item-wrap">
+							<div class="img_item">
+								<img src="themes/resido/img/yosemite-park.jpg" class="img-fluid">
+							</div>
+							<div class="content_box">
+								<h4>Yosemite National Park</h4>
+								<p>For an average of SAR 146 per night</p>
+							</div>
+						</div>
+						<div class="item-wrap">
+							<div class="img_item">
+								<img src="themes/resido/img/arches-park.jpg" class="img-fluid">
+							</div>
+							<div class="content_box">
+								<h4>Arches National Park</h4>
+								<p>For an average of SAR 141 per night</p>
+							</div>
+						</div>
+						<div class="item-wrap">
+							<div class="img_item">
+								<img src="themes/resido/img//sequoia-park.jpg" class="img-fluid">
+							</div>
+							<div class="content_box">
+								<h4>Sequoia National Park</h4>
+								<p>For an average of SAR 146 per night</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-4 destinations_right">
+						<div class="item-wrap">
+							<div class="img_item">
+								<img src="themes/resido/img/congaree-park.jpg" class="img-fluid">
+							</div>
+							<div class="content_box">
+								<h4>Congaree National Park</h4>
+								<p>For an average of SAR 133 per night</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>

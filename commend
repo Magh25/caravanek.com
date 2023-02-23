@@ -1,0 +1,82 @@
+…or create a new repository on the command line
+
+echo "# caravanek" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/Magh25/caravanek.git
+git push -u origin main
+
+…or push an existing repository from the command line
+
+git remote add origin https://github.com/Magh25/caravanek.git
+git branch -M main
+git push -u origin main 
+
+
+
+
+
+//----------google anlytics---
+معرّف القياس
+G-XZR118W38H
+معرّف البث
+4356047604
+
+
+
+#s--------------------
+caravanek@caravanek-360016.iam.gserviceaccount.com
+# الرقم التعريفي للحساب
+# View ID
+252057782
+
+
+
+
+
+https://caravanek.com
+4371670752
+G-Y14L97H1Z5
+
+
+
+
+
+
+
+
+
+----------------------------
+- password one only in gmail
+----------------------------
+caravanek1@gmail.com
+vwncrbkfsnleicib
+
+
+
+
+
+
+
+----------------------------
+- password one only in gmail
+----------------------------
+sales.caravanek@gmail.com
+tuswzkjqisnxgzxk
+ 
+
+
+
+---------------------------------
+----  zoho
+----------------------------------
+- Mailer        : SMTP
+- Port          :465
+- Host          :smtp.zoho.com
+- Username      :support@caravanek.com
+- Password      :ASDasd!@#12300
+- Encryption    :SSL
+- Sender name   :caravanek
+- Sender email  :support@caravanek.com

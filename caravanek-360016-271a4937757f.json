@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "caravanek-360016",
+  "private_key_id": "271a4937757ff09c74ae79cc61be7c2d1c7b7459",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQDa2xajbTtaNLTg\nkgQlBPiYg34rxUOM2vmDNv0TkKlpBi9h6/NUjZa3/Ofcm4eZuUR19LIS9kKpYtTB\nKxeNERU16MEmlytHnbF+UdTYO+puVAR+QyN0yGHNFFKLAmWjln/N11kwPnl0wBz+\nBlA3XbVOw+irarBXdyhKzfHkwrYPcsBRgNGvRjkFbBaFAkU5lT5QfM7XsTcAQV1F\n717c+uLJlydumgVCax5h0WscuFrzBtVnit2JdKaBdFBYQoWtf9kaEHne1rga5TqH\nDqnRpTIXWLqUTzb9o5oQJjhq0xL0BkVfXTERbJXwyawBc3oBx5hiZr+FrHlvZs2H\n3wh3FWgDAgMBAAECggEADWbTdOV9osajJDSneVGGcZHCb6a66LdeBm7JwjbJEPaB\nKfNmE/w+9FGnLHH/tJD3mWuHCLSOHMuXBfnVYtzexM2AdRRWYPfN7yjOqlZyQsL1\nVXqsrfw5Skgfd9tejaJr0sHdox/S6yx6egRj9B1SZW+HYhEnREE2ipd1jmcX+UvA\ntYbBdSvD1sLDsDd/ZTsYpcyV92DRFoepLZqWyD0Fcy+7Jr9os/F2+tNCHmZa6mGY\n1tyXH9ApAGRJKv2v199GanEMPf8md8eU7Xz6t2H0EohGRZOBypRgZpWhlKU7QzGd\nETeTCPp3W85CunEeychJusUINLJCQqqAIBX62dgaBQKBgQD8xWZrpXAa3eW2f1+8\nsBS2sVNY+pXJlghW8mv3Ucee5gOiplTI9hAJVl6qwVJbG2YdPC0iJ4wPwSY6E3Gr\ne/smibF/fo/MXXmg+sntb3NKsGPAsDbt7pjfzJYLJwXcTsResy4MP67q/0ucGjMC\nQXYf/eK0rvo/2Wh7QbSXPbYl7QKBgQDdpse9BVMy4m8H+3r8rG15lX5WXUZvRk3A\n+u83hVgXh/DivxH5B81+mUUqltd+XYhsL/7S7ViVhnYGwAvQxR70j+qJ9DaEuTe2\n816nSdvdWy0aQ2lJMQKQUFcmDLA6DWx/A5P9iuQvoWg2PSTlU9PrjRyxhJ834QaY\ncr+Q7agHrwKBgQD62q0ah8UJ5M3kn+RTTixAYxtkYsvkk5ETOOMNP4vsljllYc0i\n45Bms+CfddxVrotY2C+yhazqtbVKTaGxnglR5bTR4rizCNF8gWeEy+aPaR6WTEs3\nNmNhN5hw2Pln+oPHt+srHMhrT5GqChY1VuH0PfKPfle8pfaa3EptDkGGwQKBgExd\nMIWT9xUZ5Cz43Gd/NHxmH8+7dQ/TReiNy6ryOuZohHpqX9PPd2H9hlHlBDtaGC1F\n3+JluVZSrAkpUyjLMR4LE0ASLlJNyb8zW9IA5Un/Jqvcu8Jmqz5zH4NRbcmiZFXi\nMrNwjatHTbMaH8MOvX1y8YbLbVuAIJiXOB7DclerAoGBAPOHnCHbvyUZLkPuICYD\neX2LOn7I/ev3Z9jYnkgsUwdZXRCMul4ifOY+NTiEhw65pmZN9aZ+/8hpHzGf4/P4\ncOmsX7GfA3nuopPx4Y8D2fV6eK5FR8sqgwMucbjAKtk9a5JJyV7glOFTI9KAonjq\numaNzBW59U2v6UCN2t43FnpX\n-----END PRIVATE KEY-----\n",
+  "client_email": "caravanek@caravanek-360016.iam.gserviceaccount.com",
+  "client_id": "103947691197752472127",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/caravanek%40caravanek-360016.iam.gserviceaccount.com"
+}

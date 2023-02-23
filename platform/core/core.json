@@ -1,0 +1,7 @@
+{
+    "productId": "123456",
+    "source": "test",
+    "apiUrl": "https://test.com",
+    "apiKey": "12345",
+    "version": "1.0"
+}

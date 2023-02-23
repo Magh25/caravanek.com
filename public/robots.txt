@@ -1,0 +1,8 @@
+User-agent: Mediapartners-Google
+Disallow:  /admin/
+Disallow:  /account/
+
+User-agent: *
+Allow: /
+
+Sitemap: https://caravanek.com/sitemap.xml

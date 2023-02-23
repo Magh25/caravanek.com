@@ -1,0 +1,149 @@
+<div class="top_picks_sec">
+			<div class="container">
+				<div class="row">
+					<div class="heading">
+                        <h2>{{ __('Destinations our Renters Love') }}</h2>
+					</div>
+					<div class="view_right">
+						<a href="#">Show all <i class="fa fa-angle-double-right" aria-hidden="true"></i></a>
+					</div>				
+				</div>
+				<div class="row travel_pick">
+					<div class="pick_wrap_row">
+						<div class="col-md-4 pick_wrap">
+							<div class="travel_box">
+								<div class="pick_img">
+									<img src="themes/resido/img/travel-img1.jpg" class="img-fluid">
+								</div>
+								<div class="contant_pick">
+									<div class="price_row">
+										<div class="price">SAR 109</div>
+										<div class="rating">
+											<i class="fa fa-star" aria-hidden="true"></i>
+											<i class="fa fa-star" aria-hidden="true"></i>
+											<i class="fa fa-star" aria-hidden="true"></i>
+											<i class="fa fa-star" aria-hidden="true"></i>
+											<i class="fa fa-star" aria-hidden="true"></i>
+										</div>
+									</div>
+									<h3 class="pick_title">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h3>
+									<p class="distance">Buda, TX</p>
+									<p class="sleeps_dis">Travel Trailer / Sleeps 6</p>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-4 pick_wrap">
+							<div class="travel_box">
+								<div class="pick_img">
+									<img src="themes/resido/img/travel-img2.jpg" class="img-fluid">
+								</div>
+								<div class="contant_pick">
+									<div class="price_row">
+										<div class="price">SAR 50</div>
+										<div class="rating">
+											<i class="fa fa-star" aria-hidden="true"></i>
+											<i class="fa fa-star" aria-hidden="true"></i>
+											<i class="fa fa-star" aria-hidden="true"></i>
+											<i class="fa fa-star" aria-hidden="true"></i>
+											<i class="fa fa-star" aria-hidden="true"></i>
+										</div>
+									</div>
+									<h3 class="pick_title">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h3>
+									<p class="distance">Massillon, OH</p>
+									<p class="sleeps_dis">Class C Motor Home / Sleeps 7</p>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-4 pick_wrap">
+							<div class="travel_box">
+								<div class="pick_img">
+									<img src="themes/resido/img/travel-img3.jpg" class="img-fluid">
+								</div>
+								<div class="contant_pick">
+									<div class="price_row">
+										<div class="price">SAR 130</div>
+										<div class="rating">
+											<i class="fa fa-star" aria-hidden="true"></i>
+											<i class="fa fa-star" aria-hidden="true"></i>
+											<i class="fa fa-star" aria-hidden="true"></i>
+											<i class="fa fa-star" aria-hidden="true"></i>
+											<i class="fa fa-star" aria-hidden="true"></i>
+										</div>
+									</div>
+									<h3 class="pick_title">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h3>
+									<p class="distance">Lehi, UT</p>
+									<p class="sleeps_dis">Toy Hauler / Sleeps 8</p>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-4 pick_wrap">
+							<div class="travel_box">
+								<div class="pick_img">
+									<img src="themes/resido/img/travel-img1.jpg" class="img-fluid">
+								</div>
+								<div class="contant_pick">
+									<div class="price_row">
+										<div class="price">SAR 109</div>
+										<div class="rating">
+											<i class="fa fa-star" aria-hidden="true"></i>
+											<i class="fa fa-star" aria-hidden="true"></i>
+											<i class="fa fa-star" aria-hidden="true"></i>
+											<i class="fa fa-star" aria-hidden="true"></i>
+											<i class="fa fa-star" aria-hidden="true"></i>
+										</div>
+									</div>
+									<h3 class="pick_title">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h3>
+									<p class="distance">Buda, TX</p>
+									<p class="sleeps_dis">Travel Trailer / Sleeps 6</p>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-4 pick_wrap">
+							<div class="travel_box">
+								<div class="pick_img">
+									<img src="themes/resido/img/travel-img2.jpg" class="img-fluid">
+								</div>
+								<div class="contant_pick">
+									<div class="price_row">
+										<div class="price">SAR 50</div>
+										<div class="rating">
+											<i class="fa fa-star" aria-hidden="true"></i>
+											<i class="fa fa-star" aria-hidden="true"></i>
+											<i class="fa fa-star" aria-hidden="true"></i>
+											<i class="fa fa-star" aria-hidden="true"></i>
+											<i class="fa fa-star" aria-hidden="true"></i>
+										</div>
+									</div>
+									<h3 class="pick_title">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h3>
+									<p class="distance">Massillon, OH</p>
+									<p class="sleeps_dis">Class C Motor Home / Sleeps 7</p>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-4 pick_wrap">
+							<div class="travel_box">
+								<div class="pick_img">
+									<img src="themes/resido/img/travel-img3.jpg" class="img-fluid">
+								</div>
+								<div class="contant_pick">
+									<div class="price_row">
+										<div class="price">SAR 130</div>
+										<div class="rating">
+											<i class="fa fa-star" aria-hidden="true"></i>
+											<i class="fa fa-star" aria-hidden="true"></i>
+											<i class="fa fa-star" aria-hidden="true"></i>
+											<i class="fa fa-star" aria-hidden="true"></i>
+											<i class="fa fa-star" aria-hidden="true"></i>
+										</div>
+									</div>
+									<h3 class="pick_title">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h3>
+									<p class="distance">Lehi, UT</p>
+									<p class="sleeps_dis">Toy Hauler / Sleeps 8</p>
+								</div>
+							</div>
+						</div>					
+					</div>
+				</div>
+			</div>
+		</div>
+		

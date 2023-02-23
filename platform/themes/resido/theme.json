@@ -1,0 +1,14 @@
+{
+    "name": "Esteplogic",
+    "namespace": "Theme\\Resido\\",
+    "description": "Custom theme",
+    "author": "Esteplogic",
+    "version": "1.0.0",
+    "required_plugins": [
+        "blog",
+        "contact",
+        "language",
+        "location",
+        "real-estate"
+    ]
+}

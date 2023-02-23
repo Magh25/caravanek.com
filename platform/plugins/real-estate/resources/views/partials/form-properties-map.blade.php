@@ -1,0 +1,166 @@
+ <div class="row hidden1">
+    <div class="form-group mb-3 col-md-6">
+        <label for="latitude" class="control-label">{{ trans('plugins/real-estate::property.form.latitude') }}</label>
+        <input class="form-control" placeholder="{{ trans('plugins/real-estate::property.form.ex_latitude') }}" data-counter="25" name="latitude" type="text" value="{{ $latitude }}" id="latitude">
+    </div>
+    <div class="form-group mb-3 col-md-6">
+        <label for="longitude" class="control-label"></label>
+        <input class="form-control" placeholder="{{ trans('plugins/real-estate::property.form.ex_longitude') }}" data-counter="25" name="longitude" type="text" value="{{ $longitude }}" id="longitude">
+    </div>
+</div>
+<div class="box_google_map" data-lat="{{ $latitude }}" data-lng="{{ $longitude }}" data-zoom="15">
+    <div class="map_search">
+        <input type="text" id="address_gmap" value="" placeholder="{{ trans('plugins/real-estate::property.form.type_address_here') }}">
+        <button type="button" class="btn_gmap_locate"><img src="https://simpleicon.com/wp-content/uploads/navigation-64x64.png"/></button>
+    </div>
+    <div class="map" id="googlemap"></div>
+</div> 
+<style type="text/css">
+        .box_google_map{  border:1px solid #ccc; height:250px;  background:#eee; margin-top: '10px'; margin-bottom:0px; position:relative;  }
+    .box_google_map_popup{ min-width: 200px; margin-top: 10px; margin-bottom: 20px; }
+    .box_google_map .map{ width:100%;height: 100%; position:absolute; }
+    .box_google_map .map_search{ display:none; position:absolute; top:10px; left:10px; width:60%; min-height: 30px; border:0px solid #aaa; border-radius: 3px; z-index: 999; padding-right: 60px; }
+    .box_google_map .map_search input{ color:#222; height: auto; padding:12px; border:0px solid #aaa; background:#fff;  width: 100%; border-radius:3px; box-shadow: rgba(0, 0, 0, 0.3) 0px 1px 4px -1px; line-height: 16px; }
+    .box_google_map .map_search button{ background: #fff; color: #222; border:none; border-radius:3px; box-shadow: rgba(0, 0, 0, 0.3) 0px 1px 4px -1px; position: absolute; right: 0; top: 0; padding:6px 7px 4px 7px; font-size: 20px; line-height: 20px; cursor: pointer;  } 
+    .box_google_map .map_search button img{ width:30px; height: 30px; border: 1px solid #111; border-radius: 50%;  padding: 2px; } 
+    .box_google_map_popup .map_search button{ padding:8px 11px; }
+    .box_google_map .map_search button i{ font-size: 20px; line-height:20px; }
+    .gmnoprint .gm-style-mtc{ display: none !important; }
+    .gm-svpc{ top:26px !important; }
+</style>
+
+<script type="text/javascript">
+jQuery(function($){  
+    var loadGoogleMaps = (function($) {     
+        var now = $.now(),promise;
+        if(this.deferred) return this.deferred.promise();
+            
+        return function( version, params ) {        
+            if( promise ) { return promise; }
+      
+            var deferred = $.Deferred(),
+                resolve = function(){ deferred.resolve( window.google && google.maps ? google.maps : false ); },
+                callbackName = "loadGoogleMaps_" + ( now++ );
+
+            if( window.google && google && 0) {         
+                resolve();      
+            } else if ( window.google && google.load ) {
+                google.load("maps", version || 3, {"other_params": $.param(params) , "callback" : resolve});
+            } else {
+                params = $.extend( params, {'v': version || 3, 'callback': callbackName});
+                window[callbackName] = function(){      
+                    resolve();
+                    setTimeout(function() { try{ delete window[callbackName]; } catch(e){} }, 20);
+                }; 
+                this.deferred = deferred;
+                $.ajax({ dataType: 'script', data: params, url: 'https://maps.google.com/maps/api/js'});
+            }
+        
+            promise = deferred.promise();  
+            return promise;
+        };
+    }($));   
+    //AIzaSyDaQAItC2XYRcUZVa0YiygknKURYwCUjbU
+    loadGoogleMaps(3.0, { key:'AIzaSyC7ZAaO7NS5J6ITe3EEPA7I4kQsOycnCYA', signed_in:false, sensor:false, libraries:'places' }).done(function() {  
+        var mapId,zoom = 0,objGM = $('.box_google_map');
+        var cntrw = objGM.width();
+        if( cntrw < 200) cntrw = 200;
+        var cntrh = Math.ceil(cntrw*60/100);
+        if( cntrh < 250) cntrh=  250;
+        
+        objGM.attr('style','height:'+cntrh+'px;');
+        var _data = objGM.data();
+        var mapId = objGM.find('.map').attr('id');
+        zoom = parseInt(_data.zoom);
+        loadMap(mapId,_data.lat,_data.lng,0,false);
+        setTimeout(function(){ objGM.find('.map_search').fadeIn(); },2000); 
+        oeid = objGM.find('.map_search input').attr('id');
+        objGM.find('.map_search input').on("keydown", function(e) {
+          if ( (e.keyCode || e.which)  == 13) { e.preventDefault(); return false; }
+        });
+        var autocomplete = new google.maps.places.Autocomplete((document.getElementById(oeid)),{types: ['geocode']});
+
+        // Set initial restriction to the greater list of countries.
+        autocomplete.setComponentRestrictions({
+            // country: ["AE","SA","QA","KW","BH","OM"],
+            country: ["ae","sa","qa","kw","bh","om"],
+        }); 
+
+        google.maps.event.addListener(autocomplete, 'place_changed', function() {
+            place = autocomplete.getPlace();
+            if (place.geometry) {
+                var _loc = place.geometry.location;
+                loadMap(mapId,_loc.lat(),_loc.lng(),1,place);       
+            } else { alert('Not a valid address'); }
+        });
+
+        $(document).on("click",".map_search .btn_gmap_locate",function(){
+            var ths = $(this);
+            ths.closest('.box_google_map').find('.map').find('.map_search input').val('');
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(function(position){
+                    var _loc = position.coords;
+                    geocoder = new google.maps.Geocoder();
+                    geocoder.geocode({ location: {lat: parseFloat(_loc.latitude), lng: parseFloat(_loc.longitude) } }).then(function(response){
+                        if (response.results[0]) {
+                            loadMap(ths.closest('.box_google_map').find('.map').attr('id'),_loc.latitude,_loc.longitude,1,response.results[0]);
+                        } else                  
+                            alert('Unable to locate your location, try again');
+                    }).catch(function(){ alert('Unable to locate your location, try again'); });
+                },function(){
+                    alert('Unable to locate your location, try again');
+                });
+            } else 
+              alert("Browser doesn't support Geolocation");
+        }); 
+
+        function loadGMAddress(address){
+            if( address.address_components ){
+                
+                var _gmaddr = {
+                    place_id: address.place_id, 
+                    type: address.types[0], 
+                    lat: address.geometry.location.lat(),
+                    lng: address.geometry.location.lng(),
+                    formatted_address: address.formatted_address,
+                    locality_place_id: address.place_id,
+                    country_place_id: address.place_id
+                };
+
+                $("input#latitude").val(_gmaddr.lat).trigger('change').trigger('input');
+                $("input#longitude").val(_gmaddr.lng).trigger('change').trigger('input');
+            }
+        }
+
+        function loadMap(mapId,lat,lng,au,address){
+            if( au ){
+                loadGMAddress(address);
+            } 
+            lat = lat*1;
+            lng = lng*1;
+            
+            if(lat == 0 && lng == 0){
+                lat = '23.8859';
+                lng = '45.0792';
+                zoom = 4;
+            }
+
+
+            var latLng = new google.maps.LatLng(lat,lng);
+            var map = new google.maps.Map(document.getElementById(mapId), {zoom: zoom, center: latLng});
+            var marker = new google.maps.Marker({position: latLng, map: map, draggable:true });
+
+            google.maps.event.addListener(marker, 'dragend', function() {
+                pos = marker.getPosition();
+                lat = pos.lat(); lng = pos.lng();
+                geocoder = new google.maps.Geocoder();
+                geocoder.geocode({'location': {lat: lat, lng: lng} }, function(results, status) {
+                    if (status == google.maps.GeocoderStatus.OK) loadGMAddress(results[0]);
+                });
+            
+            });
+        }
+    });
+});
+</script>
+</html>
